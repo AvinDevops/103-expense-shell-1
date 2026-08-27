@@ -2,6 +2,11 @@
 
 set -e
 
+error_handler(){
+    echo -e "error line no: $R $1 $N and error desc: $R $2 $N"
+}
+trap 'error_handler $LINENO "$BASH_COMMAND"' ERR
+
 #fetching user,timestamp,scriptname,and creating logfile
 USER=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
