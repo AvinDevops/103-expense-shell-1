@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 #fetching user,timestamp,scriptname,and creating logfile
 USER=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
