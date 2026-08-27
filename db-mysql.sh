@@ -2,8 +2,8 @@
 
 source ./common.sh
 
-dnf install mysql-server -y &>>$LOGFILE
-VALIDATE $? "Installing mysql"
+dnf install mysql-serverddd -y &>>$LOGFILE
+# VALIDATE $? "Installing mysql"
 
 systemctl enable mysqld &>>$LOGFILE
 VALIDATE $? "Enabiling mysql"
